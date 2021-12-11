@@ -24,9 +24,12 @@ class LivenessDetector:
 		self.le = pickle.loads(open("le.pickle", "rb").read())
 
 	def detect(self):
-		
 		vs = VideoStream(src=0).start()
 		time.sleep(2.0)
+
+		# time
+		start_time = time.time()
+
 		flag = 0
 
 		while abs(flag) != 3:
@@ -71,10 +74,10 @@ class LivenessDetector:
 					#cv2.imshow("Frame", frame)
 
 		if flag == 3:
-			ans = 'Real with {:.4f} accuracy'.format(preds[j])
+			ans = 'Real with {:.4f} accuracy and it took {:.4f} seconds'.format(preds[j], time.time() - start_time)
 			
 		if flag == -3:
-			ans = 'Fake with {:.4f} accuracy'.format(preds[j])
+			ans = 'Fake with {:.4f} accuracy and it took {:.4f} seconds'.format(preds[j], time.time() - start_time)
 
 		frame_path = "./static/test.png"
 		cv2.imwrite(frame_path, frame)

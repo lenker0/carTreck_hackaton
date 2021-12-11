@@ -4,7 +4,7 @@
 
 ## Environment
 Чтобы установить окружение выполните следующие команды в консоли
-### Важно, чтобы версия питона должна быть 3.7 - 3.9
+### Важно, чтобы версия python должна быть 3.7 - 3.9
 ```
 git clone https://github.com/lenker0/carTreck_hackaton.git
 cd carTreck_hackaton

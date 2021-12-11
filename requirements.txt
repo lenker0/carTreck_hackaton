@@ -1,0 +1,6 @@
+Flask==1.1.2
+imutils==0.5.4
+keras==2.7.0
+keras_nightly==2.8.0.dev2021120808
+numpy==1.21.4
+opencv_python==4.5.1.48

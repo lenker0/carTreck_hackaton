@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Online streaming your WebCam</title>
+  <style>
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+
+      text-align: center;
+    }
+
+    .booth {  
+      width: 400px;
+      background: #ccc;
+      border: 10px solid #ddd;
+    }
+
+    .submit {
+      margin-top: 10px; 
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="{{ url_for('static', filename = frame ) }}">
+    <form action="/my-link/">
+      <input type="submit" value="Проверить" />
+      <p>{{ output }}</p>
+    </form>
+  </div>
+  
+
+</body>
+</html>

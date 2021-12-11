@@ -3,7 +3,7 @@
 
 
 ## Environment
-Чтобы установить окружение сделайте следующее 
+Чтобы установить окружение выполните следующие команды в консоли
 
 ```
 git clone https://github.com/lenker0/carTreck_hackaton.git

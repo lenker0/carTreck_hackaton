@@ -21,13 +21,5 @@ def my_link():
 	(output, frame) = ld.detect()
 	return render_template('index.html', output = output, frame = frame)
 
-@app.route("/video_feed")
-def video_feed():
-	# return the response generated along with the specific media
-	# type (mime type)
-	return Response(generate(),
-		mimetype = "multipart/x-mixed-replace; boundary=frame")
-
-
 if __name__ == '__main__':
   app.run(debug=True)
